@@ -1,21 +1,24 @@
-import './Resume.css';
+import "./Resume.css";
+import SkillBox from "../components/SkillBox";
+import MyselfCard from "../components/MyselfCard.js"
+import Grid from '@mui/material/Grid';
 
 function Resume() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="Basic">
+        <header className="Header">
+        </header>
+        <body>
+          <div className="Body">
+            <div className="Body-border">
+              <Grid container justifyContent="center">
+                <MyselfCard/>
+              </Grid>
+            </div>
+          </div> 
+        </body>
+      </div>
     </div>
   );
 }

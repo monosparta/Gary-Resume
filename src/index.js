@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from './page/Resume';
+import Resume from './page/Resume';
+// import Narbar from "./components/Narbar"; <Narbar/>
 
 ReactDOM.render(
   <React.StrictMode>
       <Router>
         <Routes>
-          <Route path="/" element={<App/>}/>
+          <Route path="/" element={<Resume/>}/>
         </Routes>
       </Router>
   </React.StrictMode>,

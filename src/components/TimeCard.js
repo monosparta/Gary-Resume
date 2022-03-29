@@ -5,12 +5,21 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ReactCardFlip from 'react-card-flip';
 
+
 const Style = {
-  card:{
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
+  cardfront:{
+    height:250,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  cardback:{
+    height:250,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   },
 }
 
@@ -20,28 +29,22 @@ export default function TimeCard(props) {
   
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
-      <Card style={Style.card} onClick={() => setFlipped((prev) => !prev)}>
+      <Card style={Style.cardfront} onClick={() => setFlipped((prev) => !prev)}>
         <CardMedia
           component="img"
-          height="194"
+          height="200"
           image={props.img}
           alt="time card img"
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            {props.introduce}
+            {props.motto}
           </Typography>
         </CardContent>
       </Card>
-      <Card style={Style.card} onClick={() => setFlipped((prev) => !prev)}>
-        <CardMedia
-          component="img"
-          height="194"
-          image={props.img}
-          alt="time card img"
-        />
+      <Card style={Style.cardback} onClick={() => setFlipped((prev) => !prev)}>
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" align="left" color="text.secondary">
             {props.introduce}
           </Typography>
         </CardContent>

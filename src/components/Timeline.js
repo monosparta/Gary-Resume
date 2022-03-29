@@ -39,7 +39,7 @@ export default function CustomizedTimeline() {
           <Typography variant="h6" component="span">
             畢業
           </Typography>
-          <TimeCard img={FCUImg} introduce='畢業於逢甲大學的小廢物'/>
+          <TimeCard img={FCUImg} motto='啟程與成長'/>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -61,7 +61,7 @@ export default function CustomizedTimeline() {
           <Typography variant="h6" component="span">
             醫療資訊行政
           </Typography>
-          <TimeCard img={InjectImg} introduce='幫忙打針的小廢物'/>
+          <TimeCard img={InjectImg} motto='磨練與助人'/>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -83,7 +83,7 @@ export default function CustomizedTimeline() {
           <Typography variant="h6" component="span">
             創科資訊-實習生
           </Typography>
-          <TimeCard img={TrunkStudioImg} introduce='實習中的小廢物'/>
+          <TimeCard img={TrunkStudioImg} motto='精進與重生'/>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

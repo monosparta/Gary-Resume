@@ -30,7 +30,7 @@ export default function SkillBox() {
     }
     
     return (
-        <div className="cardSet">
+        <div className="BoxSet">
             <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="cards">
                 {(provided) => (

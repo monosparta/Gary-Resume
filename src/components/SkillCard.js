@@ -3,22 +3,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import DjangoImg from '../img/django.png';
 
-export default function MediaCard() {
+export default function SkillCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: '80%' }}>
       <CardMedia
         component="img"
         height="50"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="django"
+        image={DjangoImg}
+        alt="skill_img"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Django
-        </Typography>
         <Typography variant="body2" color="text.secondary">
-          最愛使用
+          Django
         </Typography>
       </CardContent>
     </Card>

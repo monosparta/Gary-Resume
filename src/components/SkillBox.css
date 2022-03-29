@@ -1,6 +1,7 @@
-.cardSet{
+.BoxSet{
     width:100%;
     height:100%;
+    background-image: url('../img/skill_background.jpg');
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 1%;

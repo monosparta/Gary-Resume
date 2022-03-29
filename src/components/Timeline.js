@@ -12,7 +12,7 @@ import HailIcon from '@mui/icons-material/Hail';
 import Typography from '@mui/material/Typography';
 import TimeCard from './TimeCard.js'
 import FCUImg from '../img/FCU.jpg'
-import Inject from '../img/Inject.jpg'
+import InjectImg from '../img/Inject.jpg'
 import TrunkStudioImg from '../img/TrunkStudio.jpg'
 
 
@@ -55,13 +55,13 @@ export default function CustomizedTimeline() {
           <TimelineDot color="primary">
             <LaptopMacIcon />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
             醫療資訊行政
           </Typography>
-          <TimeCard img={Inject} introduce='幫忙打針的小廢物'/>
+          <TimeCard img={InjectImg} introduce='幫忙打針的小廢物'/>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -73,11 +73,11 @@ export default function CustomizedTimeline() {
           2022
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary" variant="outlined">
+          <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
+          <TimelineDot color='success' variant="outlined">
             <HailIcon />
           </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          <TimelineConnector sx={{ bgcolor: 'success.main' }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">

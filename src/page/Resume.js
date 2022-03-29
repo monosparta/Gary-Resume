@@ -4,6 +4,8 @@ import MyselfCard from "../components/MyselfCard.js"
 import Timeline from "../components/Timeline.js"
 import Grid from '@mui/material/Grid';
 
+
+
 function Resume() {
   return (
     <div>
@@ -21,16 +23,16 @@ function Resume() {
               </Grid>
               <Grid container spacing={1} columns={{ xs: 3, sm: 6, md: 12 }}>
                 <Grid item xs={3}>
-                  <SkillBox/>
+                  <SkillBox title="Front-end"/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox/>
+                  <SkillBox title="Back-end"/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox/>
+                  <SkillBox title="Database"/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox/>
+                  <SkillBox title="Others"/>
                 </Grid>
               </Grid>
             </div>

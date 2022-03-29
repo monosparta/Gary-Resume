@@ -1,23 +1,59 @@
+import "./SkillBox.css"
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import "./SkillBox.css"
 import SkillCard from "./SkillCard.js"
+import Typography from '@mui/material/Typography';
 
-const cardDatas = [
+const frontend = [
     {
-      id: 'gary',
-      name: 'Gary Goodspeed',
+      id: 'React',
+      name: 'React',
     },
     {
-      id: 'cato',
-      name: 'Little Cato',
-
+      id: 'Html',
+      name: 'Html',
     }
 ]
 
-export default function SkillBox() {
+const backend = [
+    {
+      id: 'Django',
+      name: 'Django',
+    },
+]
 
-    const [cards, updateCards] = useState(cardDatas);
+const database = [
+    {
+      id: 'MySQL',
+      name: 'MySQL',
+    },
+]
+
+const others = [
+    {
+      id: 'Figma',
+      name: 'Figma',
+    },
+]
+
+export default function SkillBox(props) {
+    let data;
+
+    switch (props.title) {
+        case "Front-end":
+            data = frontend;
+            break;
+        case "Back-end":
+            data = backend;
+            break;
+        case "Database":
+            data = database;
+            break;
+        default:
+            data = others;
+    }
+
+    const [cards, updateCards] = useState(data);
   
     function handleOnDragEnd(result) {
       if (!result.destination) return;
@@ -31,16 +67,20 @@ export default function SkillBox() {
     
     return (
         <div className="BoxSet">
+            <Typography variant="h">
+                {props.title}
+            </Typography>
+            <hr  style={{ width:'80%' ,color: '#000000',height: .5}}/>
             <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="cards">
                 {(provided) => (
                     <ul className="cards" {...provided.droppableProps} ref={provided.innerRef}>
-                    {cards.map(({id}, index) => {
+                    {cards.map(({id,name}, index) => {
                     return (
                         <Draggable key={id} draggableId={id} index={index}>
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>  
-                                <SkillCard/>
+                                <SkillCard name={name}/>
                             </div>
                         )}
                         </Draggable>

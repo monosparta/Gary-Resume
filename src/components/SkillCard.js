@@ -5,9 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import DjangoImg from '../img/django.png';
 
-export default function SkillCard() {
+export default function SkillCard(props) {
   return (
-    <Card sx={{ maxWidth: '80%' }}>
+    <Card sx={{ maxWidth: '80%' }} style={{backgroundColor: "red"}}>
       <CardMedia
         component="img"
         height="50"
@@ -16,7 +16,7 @@ export default function SkillCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Django
+          {props.name}
         </Typography>
       </CardContent>
     </Card>

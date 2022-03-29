@@ -28,13 +28,13 @@ export default function MediaCard() {
         <Card style={Style.card}>
         <CardMedia
             component="img"
-            height="140"
+            height="150"
             image={HeaderCard}
             alt="header_card"
         />
         <Avatar 
             sx={Style.avatar} 
-            src={'https://i.pravatar.cc/300'} 
+            src={"https://i.pravatar.cc/300"} 
             alt="me"
         />
         <CardContent>

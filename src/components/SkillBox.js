@@ -7,8 +7,12 @@ import DjangoImg from '../img/django.png';
 import FigmaImg from '../img/figma.png';
 import HtmlImg from '../img/html5.png';
 import ReactImg from '../img/react.png';
+import BootstrapImg from '../img/bootstrap.png';
 import MySQLImg from '../img/mysql.png';
-import NodejsImg from '../img/nodejs.png';
+import PostgreSQLImg from '../img/postgresql.png';
+import ExpressjsImg from '../img/expressjs.png';
+import ASPNetCoreImg from '../img/ASP.NET_Core.png';
+import SqliteImg from '../img/sqlite.png';
 
 const frontend = [
     {
@@ -21,6 +25,11 @@ const frontend = [
         name: 'React',
         img: ReactImg
     },
+    {
+        id: 'Bootstrap',
+        name: 'Bootstrap',
+        img: BootstrapImg
+    },
 ]
 
 const backend = [
@@ -30,9 +39,14 @@ const backend = [
         img: DjangoImg
     },
     {
-        id: 'Nodejs',
-        name: 'Nodejs',
-        img: NodejsImg
+        id: 'Express.js',
+        name: 'Express.js',
+        img: ExpressjsImg
+    },
+    {
+        id: 'ASP.NET Core',
+        name: 'ASP.NET Core',
+        img: ASPNetCoreImg
     },
 ]
 
@@ -41,6 +55,16 @@ const database = [
         id: 'MySQL',
         name: 'MySQL',
         img: MySQLImg
+    },
+    {
+        id: 'PostgreSQL',
+        name: 'PostgreSQL',
+        img: PostgreSQLImg
+    },
+    {
+        id: 'Sqlite',
+        name: 'Sqlite',
+        img: SqliteImg
     },
 ]
 

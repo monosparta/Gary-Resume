@@ -1,27 +1,18 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import TimeCard from './MyselfCard.js'
+import CollectionCard from './CollectionCard.js'
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   slide: {
     padding: 15,
     minHeight: 100,
-    color: '#fff',
-  },
-  slide1: {
-    backgroundColor: '#FEA900',
-  },
-  slide2: {
-    backgroundColor: '#B3DC4A',
-  },
-  slide3: {
-    backgroundColor: '#6AC0FF',
-  },
+    maxWight:250
+  }
 };
 
-class DemoAutoPlay extends React.Component {
+class Collections extends React.Component {
   state = {
     index: 0,
   };
@@ -36,17 +27,17 @@ class DemoAutoPlay extends React.Component {
     const { index } = this.state;
 
     return (
-        <AutoPlaySwipeableViews
-          index={index}
-          onChangeIndex={this.handleChangeIndex}
+        <AutoPlaySwipeableViews 
+          index={index} 
+          onChangeIndex={this.handleChangeIndex} 
           enableMouseEvents
         >
-          <div style={Object.assign({}, styles.slide, styles.slide1)}><TimeCard/></div>
-          <div style={Object.assign({}, styles.slide, styles.slide2)}><TimeCard/></div>
-          <div style={Object.assign({}, styles.slide, styles.slide3)}><TimeCard/></div>
+          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
+          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
+          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
         </AutoPlaySwipeableViews>
     );
   }
 }
 
-export default DemoAutoPlay
+export default Collections

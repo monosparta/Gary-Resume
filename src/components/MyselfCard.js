@@ -9,6 +9,7 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
 import HeaderCard from  '../img/header_card_img.jpg'
+import Me from  '../img/me.jpg'
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -45,7 +46,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
   
-export default function MediaCard() {
+export default function MyselfCard() {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {setExpanded(!expanded);};
@@ -60,7 +61,7 @@ export default function MediaCard() {
             />
             <Avatar 
                 sx={Style.avatar} 
-                src={"https://i.pravatar.cc/300"} 
+                src={Me} 
                 alt="me"
             />
             <CardContent>

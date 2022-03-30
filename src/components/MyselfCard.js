@@ -14,6 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Grid from '@mui/material/Grid';
 import EmailIcon from '@mui/icons-material/Email';
 
 const Style = {
@@ -70,30 +71,32 @@ export default function MediaCard() {
                     一個不是在製造bug，就是在製造更多bugs的工程師。
                 </Typography>
                 <Box mt={2} >
-                    <Box textAlign="left">
-                        <Typography variant="body2">
+                    <Grid container spacing={12} columns={{ xs: 4, sm: 4, md: 12 }}>
+                        <Grid item xs={4}>
                             <Link href="tel:+886-919612283" underline="none">
                                 <LocalPhoneIcon sx={{ fontSize: 25 }}/> 
-                                0919-612283
+                                <Typography variant="body2">
+                                    0919-612283
+                                </Typography>
                             </Link>
-                        </Typography>
-                    </Box>
-                    <Box textAlign="left">
-                        <Typography variant="body2">
+                        </Grid>
+                        <Grid item xs={4}>
                             <Link href="mailto:garyopen1876@gmail.com" underline="none">
                                 <EmailIcon sx={{ fontSize: 25 }}/> 
-                                garyopen1876@gmail.com
-                            </Link>    
-                        </Typography>
-                    </Box>
-                    <Box textAlign="left">
-                        <Typography variant="body2">
+                                <Typography variant="body2">
+                                    garyopen1876@gmail.com
+                                </Typography>
+                            </Link>   
+                        </Grid>
+                        <Grid item xs={4} >
                             <Link href="https://github.com/garyopen1876" underline="none" target="_blank" rel="noreferrer noopenner">
                                 <GitHubIcon sx={{ fontSize: 25 }}/> 
-                                https://github.com/garyopen1876
+                                <Typography variant="body2">
+                                    https://github.com/garyopen1876 
+                                </Typography> 
                             </Link>
-                        </Typography> 
-                    </Box>
+                        </Grid>
+                    </Grid>
                 </Box>
             </CardContent>
             <CardActions disableSpacing >
@@ -104,7 +107,7 @@ export default function MediaCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-                <Typography paragraph>Method:</Typography>
+                <Typography paragraph>簡歷</Typography>
                 <Typography paragraph>
                     Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
                     aside for 10 minutes.

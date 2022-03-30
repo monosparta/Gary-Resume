@@ -71,28 +71,28 @@ export default function MediaCard() {
                 </Typography>
                 <Box mt={2} textAlign="right">
                     <Box textAlign="left">
-                        <Link href="tel:+886-919612283" underline="none">
-                            <Typography variant="body2">
+                        <Typography variant="body2">
+                            <Link href="tel:+886-919612283" underline="none">
                                 <LocalPhoneIcon sx={{ fontSize: 25 }}/> 
                                 0919-612283
-                            </Typography>
-                        </Link>
+                            </Link>
+                        </Typography>
                     </Box>
                     <Box textAlign="left">
-                        <Link href="mailto:garyopen1876@gmail.com" underline="none">
-                            <Typography variant="body2">
+                        <Typography variant="body2">
+                            <Link href="mailto:garyopen1876@gmail.com" underline="none">
                                 <EmailIcon sx={{ fontSize: 25 }}/> 
                                 garyopen1876@gmail.com
-                            </Typography>
-                        </Link>
+                            </Link>    
+                        </Typography>
                     </Box>
-                    <Box textAlign="left" onClick={() => window.open('https://github.com/garyopen1876')}>
-                        <Link href="#" underline="none">
-                            <Typography variant="body2">
+                    <Box textAlign="left">
+                        <Typography variant="body2">
+                            <Link href="https://github.com/garyopen1876" underline="none" target="_blank" rel="noreferrer noopenner">
                                 <GitHubIcon sx={{ fontSize: 25 }}/> 
                                 https://github.com/garyopen1876
-                            </Typography>
-                        </Link>
+                            </Link>
+                        </Typography> 
                     </Box>
                 </Box>
             </CardContent>

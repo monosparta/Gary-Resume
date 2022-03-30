@@ -2,6 +2,7 @@ import "./Resume.css";
 import SkillBox from "../components/SkillBox.js";
 import MyselfCard from "../components/MyselfCard.js"
 import Timeline from "../components/Timeline.js"
+import Collections from "../components/Collections.js"
 import Grid from '@mui/material/Grid';
 
 
@@ -34,6 +35,9 @@ function Resume() {
                 <Grid item xs={3}>
                   <SkillBox title="More"/>
                 </Grid>
+              </Grid>
+              <Grid container justifyContent="center">
+                <Collections/>
               </Grid>
             </div>
           </div> 

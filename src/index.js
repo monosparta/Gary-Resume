@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Resume from './page/Resume';
-// import Narbar from "./components/Narbar"; <Narbar/>
 
 ReactDOM.render(
   <React.StrictMode>

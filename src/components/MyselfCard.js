@@ -69,7 +69,7 @@ export default function MediaCard() {
                 <Typography variant="body2" color="text.secondary">
                     一個不是在製造bug，就是在製造更多bugs的工程師。
                 </Typography>
-                <Box mt={2} textAlign="right">
+                <Box mt={2} >
                     <Box textAlign="left">
                         <Typography variant="body2">
                             <Link href="tel:+886-919612283" underline="none">

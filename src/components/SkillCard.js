@@ -1,20 +1,18 @@
 import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import DjangoImg from '../img/django.png';
+
 
 export default function SkillCard(props) {
   return (
-    <Card sx={{ maxWidth: '80%' }} style={{backgroundColor: "red"}}>
-      <CardMedia
-        component="img"
-        height="50"
-        image={DjangoImg}
+    <Card sx={{ width: '80%' }}>
+      <Avatar 
+        src={props.img}
         alt="skill_img"
       />
-      <CardContent>
+      <CardContent alignItems="center">
         <Typography variant="body2" color="text.secondary">
           {props.name}
         </Typography>

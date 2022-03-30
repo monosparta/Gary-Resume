@@ -32,7 +32,7 @@ function Resume() {
                   <SkillBox title="Database"/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox title="Others"/>
+                  <SkillBox title="More"/>
                 </Grid>
               </Grid>
             </div>

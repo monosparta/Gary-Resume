@@ -3,36 +3,52 @@ import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import SkillCard from "./SkillCard.js"
 import Typography from '@mui/material/Typography';
+import DjangoImg from '../img/django.png';
+import FigmaImg from '../img/figma.png';
+import HtmlImg from '../img/html5.png';
+import ReactImg from '../img/react.png';
+import MySQLImg from '../img/mysql.png';
+import NodejsImg from '../img/nodejs.png';
 
 const frontend = [
     {
-      id: 'React',
-      name: 'React',
+        id: 'Html',
+        name: 'Html',
+        img: HtmlImg 
     },
     {
-      id: 'Html',
-      name: 'Html',
-    }
+        id: 'React',
+        name: 'React',
+        img: ReactImg
+    },
 ]
 
 const backend = [
     {
-      id: 'Django',
-      name: 'Django',
+        id: 'Django',
+        name: 'Django',
+        img: DjangoImg
+    },
+    {
+        id: 'Nodejs',
+        name: 'Nodejs',
+        img: NodejsImg
     },
 ]
 
 const database = [
     {
-      id: 'MySQL',
-      name: 'MySQL',
+        id: 'MySQL',
+        name: 'MySQL',
+        img: MySQLImg
     },
 ]
 
-const others = [
+const more = [
     {
-      id: 'Figma',
-      name: 'Figma',
+        id: 'Figma',
+        name: 'Figma',
+        img: FigmaImg
     },
 ]
 
@@ -50,7 +66,7 @@ export default function SkillBox(props) {
             data = database;
             break;
         default:
-            data = others;
+            data = more;
     }
 
     const [cards, updateCards] = useState(data);
@@ -75,12 +91,12 @@ export default function SkillBox(props) {
                 <Droppable droppableId="cards">
                 {(provided) => (
                     <ul className="cards" {...provided.droppableProps} ref={provided.innerRef}>
-                    {cards.map(({id,name}, index) => {
+                    {cards.map(({id,name,img}, index) => {
                     return (
                         <Draggable key={id} draggableId={id} index={index}>
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>  
-                                <SkillCard name={name}/>
+                                <SkillCard img={img} name={name}/>
                             </div>
                         )}
                         </Draggable>

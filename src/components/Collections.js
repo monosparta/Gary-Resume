@@ -2,13 +2,15 @@ import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import CollectionCard from './CollectionCard.js'
+import Box from '@mui/material/Box'
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   slide: {
     padding: 15,
     minHeight: 100,
-    maxWight:250
+    maxWight:250,
   }
 };
 
@@ -32,9 +34,9 @@ class Collections extends React.Component {
           onChangeIndex={this.handleChangeIndex} 
           enableMouseEvents
         >
-          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
-          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
-          <div style={Object.assign({}, styles.slide)}><CollectionCard/></div>
+          <Box style={styles.slide}><CollectionCard/></Box>
+          <Box style={styles.slide}><CollectionCard/></Box>
+          <Box style={styles.slide}><CollectionCard/></Box>
         </AutoPlaySwipeableViews>
     );
   }

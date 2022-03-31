@@ -16,7 +16,7 @@ function Resume() {
         <body>
           <div className="Body">
             <div className="Body-border">
-              <Grid container justifyContent="center">
+              <Grid container justifyContent="center" >
                 <MyselfCard/>
               </Grid>
               <Grid container justifyContent="center">
@@ -36,7 +36,7 @@ function Resume() {
                   <SkillBox title="More"/>
                 </Grid>
               </Grid>
-              <Grid container justifyContent="center">
+              <Grid container justifyContent="center" alignItems="center">
                 <Collections/>
               </Grid>
             </div>

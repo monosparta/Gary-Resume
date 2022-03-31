@@ -44,8 +44,8 @@ const backend = [
         img: ExpressjsImg
     },
     {
-        id: 'ASP.NET Core',
-        name: 'ASP.NET Core',
+        id: '.NET Core',
+        name: '.NET Core',
         img: ASPNetCoreImg
     },
 ]
@@ -107,7 +107,7 @@ export default function SkillBox(props) {
     
     return (
         <div className="BoxSet">
-            <Typography variant="h">
+            <Typography variant="h" sx={{ fontWeight: 'bold' }}>
                 {props.title}
             </Typography>
             <hr  style={{ width:'80%' ,color: '#000000',height: .5}}/>

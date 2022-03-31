@@ -65,10 +65,10 @@ export default function MyselfCard() {
                 alt="me"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                     鈕臻昱
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
                     一個不是在製造bug，就是在製造更多bugs的工程師。
                 </Typography>
                 <Box mt={2} >

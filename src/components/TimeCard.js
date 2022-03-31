@@ -8,19 +8,22 @@ import ReactCardFlip from 'react-card-flip';
 const Style = {
   cardfront:{
     height:'100%',
-    minHeight:260,
+    minHeight:330,
     width: '100%',
+    minWidth:240,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   cardback:{
     height:'100%',
-    minHeight:260,
+    minHeight:330,
     width: '100%',
+    minWidth:240,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent:'center',
   },
   cardmedia:{
     position: "absolute",
@@ -39,15 +42,15 @@ export default function TimeCard(props) {
   
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection='vertical'>
-      <Card style={Style.cardfront} onMouseOver={() => setFlipped((prev) => !prev)}>
+      <Card style={Style.cardfront} onClick={() => setFlipped((prev) => !prev)}>
         <CardMedia 
           component="img"
-          height="200"
+          height="250"
           image={props.img}
           alt="time card img"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
             {props.motto}
           </Typography>
         </CardContent>
@@ -55,20 +58,17 @@ export default function TimeCard(props) {
       <Card style={Style.cardback} onClick={() => setFlipped((prev) => !prev)}>
         <CardMedia style={Style.cardmedia}
           component="img"
-          height="200"
+          height="250"
           image={props.imgb}
           alt="time card img"
         />
         <CardContent style={Style.cardcontent}>
           <Typography paragraph></Typography>
-          <Typography paragraph variant="body2" align="left">
+          <Typography paragraph variant="body2" align="left" sx={{ fontWeight: 'bold' }}>
             {props.paragraph1}
           </Typography>
-          <Typography paragraph variant="body2" align="left">
+          <Typography variant="body2" align="left" sx={{ fontWeight: 'bold' }}>
             {props.paragraph2}
-          </Typography>
-          <Typography variant="body2" align="left" >
-            {props.paragraph3}
           </Typography>
         </CardContent>
       </Card>

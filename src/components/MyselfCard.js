@@ -72,7 +72,7 @@ export default function MyselfCard() {
                     一個不是在製造bug，就是在製造更多bugs的工程師。
                 </Typography>
                 <Box mt={2} >
-                    <Grid container spacing={12} columns={{ xs: 4, sm: 4, md: 12 }}>
+                    <Grid container spacing={4} columns={{ xs: 4, sm: 4, md: 12 }}>
                         <Grid item xs={4}>
                             <Link href="tel:+886-919612283" underline="none">
                                 <LocalPhoneIcon sx={{ fontSize: 25 }}/> 

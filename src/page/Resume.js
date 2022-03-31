@@ -4,7 +4,7 @@ import MyselfCard from "../components/MyselfCard.js"
 import Timeline from "../components/Timeline.js"
 import Collections from "../components/Collections.js"
 import Grid from '@mui/material/Grid';
-
+import Typography from '@mui/material/Typography';
 
 
 function Resume() {
@@ -19,24 +19,36 @@ function Resume() {
               <Grid container justifyContent="center" >
                 <MyselfCard/>
               </Grid>
+              <Typography variant="h5" sx={{ p: 5, mb: -5, fontWeight: 'bold' }} color="#B5B5B5">
+                學經歷 Education & Experience
+              </Typography>
               <Grid container justifyContent="center">
+                <hr  style={{ width:'90%', height: 3, backgroundColor: '#C9C9C9', borderColor : '#FFF3DE'}}/>
                 <Timeline/>
               </Grid>
+              <Typography variant="h5" sx={{ p: 5, mb: -5, fontWeight: 'bold' }} color="#B5B5B5">
+                專長 Skill
+              </Typography>
               <Grid container spacing={1} columns={{ xs: 3, sm: 6, md: 12 }}>
+                <hr  style={{ width:'90%', height: 3, backgroundColor: '#C9C9C9', borderColor : '#FFF3DE'}}/>
                 <Grid item xs={3}>
-                  <SkillBox title="Front-end"/>
+                  <SkillBox title="Front-end" color='#DABEA7'/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox title="Back-end"/>
+                  <SkillBox title="Back-end" color='#A98B73'/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox title="Database"/>
+                  <SkillBox title="Database" color='#9D7553'/>
                 </Grid>
                 <Grid item xs={3}>
-                  <SkillBox title="More"/>
+                  <SkillBox title="More" color='#876D5A'/>
                 </Grid>
               </Grid>
+              <Typography variant="h5" sx={{ p: 5, mb: -5, fontWeight: 'bold' }} color="#B5B5B5">
+                作品集 Collections
+              </Typography>
               <Grid container justifyContent="center" alignItems="center">
+                <hr  style={{ width:'90%', height: 3, backgroundColor: '#C9C9C9', borderColor : '#FFF3DE'}}/>
                 <Collections/>
               </Grid>
             </div>

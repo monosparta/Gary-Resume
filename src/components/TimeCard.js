@@ -42,7 +42,7 @@ export default function TimeCard(props) {
   
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection='vertical'>
-      <Card style={Style.cardfront} onClick={() => setFlipped((prev) => !prev)}>
+      <Card style={Style.cardfront} onMouseOver={() => setFlipped((prev) => !prev)}>
         <CardMedia 
           component="img"
           height="250"

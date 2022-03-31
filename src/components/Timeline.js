@@ -44,14 +44,14 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
           <TimelineDot color="primary">
             <LaptopMacIcon />
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }} color="#75809C">
             2021 - 醫療資訊行政
           </Typography>
           <TimeCard 
@@ -65,14 +65,14 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
+          <TimelineConnector sx={{ bgcolor: 'success.main' }}/>
           <TimelineDot color='success' variant="outlined">
             <BusinessCenterIcon />
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: 'success.main' }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }} color="#2F4F4F">
             2022 - 創科資訊:實習生
           </Typography>
           <TimeCard 
@@ -80,7 +80,7 @@ export default function CustomizedTimeline() {
             imgb={TrunkStudioBImg}  
             motto="精進與重生"
             paragraph1="隨著疫情的趨緩以及個人對程式的興趣，我很希望能再次投入科技業中，但對於前進業界，我面臨「經驗不足」以及「程式生疏」兩個嚴重的問題。"
-            paragraph2="在我煩惱不已時，創科資訊提供我一個提升實力與增添經歷的機會，在實習期間我也積極強化程式設計的即戰力以及培養與他人合作開發的能力。"
+            paragraph2="在我煩惱不已時，創科資訊提供我一個提升實力與增添經歷的機會，實習期間我也積極強化程式設計的即戰力以及培養與他人合作開發的能力。"
           />
         </TimelineContent>
       </TimelineItem>

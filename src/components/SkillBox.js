@@ -13,6 +13,7 @@ import PostgreSQLImg from '../img/postgresql.png';
 import ExpressjsImg from '../img/expressjs.png';
 import ASPNetCoreImg from '../img/ASP.NET_Core.png';
 import SqliteImg from '../img/sqlite.png';
+import GitImg from '../img/git.png';
 
 const frontend = [
     {
@@ -74,6 +75,11 @@ const more = [
         name: 'Figma',
         img: FigmaImg
     },
+    {
+        id: 'Git',
+        name: 'Git',
+        img: GitImg
+    },
 ]
 
 export default function SkillBox(props) {
@@ -107,7 +113,7 @@ export default function SkillBox(props) {
     
     return (
         <div className="BoxSet">
-            <Typography variant="h" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h" sx={{ fontWeight: 'bold' }} color={props.color}>
                 {props.title}
             </Typography>
             <hr  style={{ width:'80%', height: 1, backgroundColor: '#C9C9C9', borderColor : '#FFF3DE'}}/>

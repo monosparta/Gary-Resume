@@ -55,7 +55,7 @@ export default function MyselfCard() {
         <Card style={Style.card}>
             <CardMedia
                 component="img"
-                height="150"
+                height="200"
                 image={HeaderCard}
                 alt="header_card"
             />
@@ -71,6 +71,27 @@ export default function MyselfCard() {
                 <Typography variant="body2" color="text.secondary">
                     一個不是在製造bug，就是在製造更多bugs的工程師。
                 </Typography>
+                <Typography paragraph></Typography>
+                <Typography paragraph align="left" sx={{ p: 5, mb: -5 , fontWeight: 'bold' }}>
+                    本人畢業於逢甲大學資工系，擅長且喜愛後端相關工程(如:演算法、資料庫)，
+                    目前也在努力熟悉前端套件(React、Vue)希望能夠朝著全端之路邁進，
+                    平時會透過Leetcode、Zerojudge等練習網站來維持並持續提升自己的程式設計能力。
+                </Typography>
+                <Typography paragraph align="left" sx={{ p: 5, mb: -5, fontWeight: 'bold' }}>
+                    我是一位樂於溝通且細心的人，凡是我負責的事情一定會盡全力做好並避免任何錯誤發生。
+                    閒暇之餘我會去思考有沒有什麼程式是能夠在日常生活中幫助到我的，然後嘗試將其變成我的Side Project，
+                    因為對我來說能將程式融入生活是展現科技最直接的表現。
+                    雖然失敗往往比能用的多很多，但仍不減我對程式開發的熱忱。 
+                </Typography>
+            </CardContent>
+            <CardActions disableSpacing >
+                聯絡資訊
+                <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
+                    <ExpandMoreIcon />
+                </ExpandMore>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <CardContent>
                 <Box mt={2} >
                     <Grid container spacing={4} columns={{ xs: 4, sm: 4, md: 12 }}>
                         <Grid item xs={4}>
@@ -99,40 +120,6 @@ export default function MyselfCard() {
                         </Grid>
                     </Grid>
                 </Box>
-            </CardContent>
-            <CardActions disableSpacing >
-                詳細自傳
-                <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
-                    <ExpandMoreIcon />
-                </ExpandMore>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-                <Typography paragraph>簡歷</Typography>
-                <Typography paragraph>
-                    Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                    aside for 10 minutes.
-                </Typography>
-                <Typography paragraph>
-                    Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
-                    medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                    occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                    large plate and set aside, leaving chicken and chorizo in the pan. Add
-                    pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                    stirring often until thickened and fragrant, about 10 minutes. Add
-                    saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-                </Typography>
-                <Typography paragraph>
-                    Add rice and stir very gently to distribute. Top with artichokes and
-                    peppers, and cook without stirring, until most of the liquid is absorbed,
-                    15 to 18 minutes. Reduce heat to medium-low, add reserved shrimp and
-                    mussels, tucking them down into the rice, and cook again without
-                    stirring, until mussels have opened and rice is just tender, 5 to 7
-                    minutes more. (Discard any mussels that don’t open.)
-                </Typography>
-                <Typography>
-                    Set aside off of the heat to let rest for 10 minutes, and then serve.
-                </Typography>
             </CardContent>
             </Collapse>
         </Card>

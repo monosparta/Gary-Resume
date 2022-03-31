@@ -50,7 +50,7 @@ export default function TimeCard(props) {
           alt="time card img"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 'bold' }}>
             {props.motto}
           </Typography>
         </CardContent>

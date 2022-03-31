@@ -4,11 +4,10 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import SchoolIcon from '@mui/icons-material/School';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HailIcon from '@mui/icons-material/Hail';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import Typography from '@mui/material/Typography';
 import TimeCard from './TimeCard.js'
 import FCUImg from '../img/FCU.jpg'
@@ -31,14 +30,14 @@ export default function CustomizedTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            畢業
+          <Typography variant="h6" component="span"  sx={{ fontWeight: 'bold' }} color="#c1b28f">
+            2020 - 畢業
           </Typography>
           <TimeCard 
             img={FCUImg}
             imgb={FCUBImg} 
             motto="啟程與成長"
-            paragraph1="我第一個觸碰的程式語言是C，起初還能跟得上課程進度，但後來的Array、LinkedList讓我遇到了瓶頸，也曾思考為什麼自己要選擇資工，最後我告訴自己既然是自己的選擇，那麼就要想辦法做到最好。"
+            paragraph1="C是我第一個觸碰的程式語言，剛開始學還勉強跟得上課程進度，但後來的Array、LinkedList讓我遇到了瓶頸，也曾思考為什麼自己要選擇資工，最後我告訴自己既然是自己的選擇，那麼就要想辦法做到最好。"
             paragraph2="漸漸的我學會了更多的語言、也學習到程式不光只是寫，還有使用者需求、設計、優化、維護這些必要且繁瑣的開發流程，以及團隊合作的重要性。"
           />
         </TimelineContent>
@@ -52,8 +51,8 @@ export default function CustomizedTimeline() {
           <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            醫療資訊行政
+          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+            2021 - 醫療資訊行政
           </Typography>
           <TimeCard 
             img={InjectImg}
@@ -68,20 +67,20 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'primary.main' }}/>
           <TimelineDot color='success' variant="outlined">
-            <HailIcon />
+            <BusinessCenterIcon />
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: 'success.main' }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            創科資訊-實習生
+          <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
+            2022 - 創科資訊:實習生
           </Typography>
           <TimeCard 
             img={TrunkStudioImg}
             imgb={TrunkStudioBImg}  
             motto="精進與重生"
-            paragraph1=""
-            paragraph2=""
+            paragraph1="隨著疫情的趨緩以及個人對程式的興趣，我很希望能再次投入科技業中，但對於前進業界，我面臨「經驗不足」以及「程式生疏」兩個嚴重的問題。"
+            paragraph2="在我煩惱不已時，創科資訊提供我一個提升實力與增添經歷的機會，在實習期間我也積極強化程式設計的即戰力以及培養與他人合作開發的能力。"
           />
         </TimelineContent>
       </TimelineItem>

@@ -110,7 +110,7 @@ export default function SkillBox(props) {
             <Typography variant="h" sx={{ fontWeight: 'bold' }}>
                 {props.title}
             </Typography>
-            <hr  style={{ width:'80%' ,color: '#000000',height: .5}}/>
+            <hr  style={{ width:'80%', height: 1, backgroundColor: '#C9C9C9', borderColor : '#FFF3DE'}}/>
             <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="cards">
                 {(provided) => (
